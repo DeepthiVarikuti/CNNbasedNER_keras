@@ -36,27 +36,6 @@ print('step3')
 
 
 ## Build the model
-##sequence_input = Input(shape=(None,),dtype='int32',name='sequence_input')
-##embedded_sequences = Embedding(input_dim=Glov_wordEmbd.shape[0], output_dim=Glov_wordEmbd.shape[1],  weights=[Glov_wordEmbd], trainable=False)(sequence_input)
-##
-##x = Conv1D(128, 5, activation='relu')(embedded_sequences)
-##x = MaxPooling1D(5)(x)
-##x = Conv1D(128, 5, activation='relu')(x)
-##x = MaxPooling1D(5)(x)
-##x = Conv1D(128, 5, activation='relu')(x)
-##x = MaxPooling1D(35)(x)
-##x = Flatten()(x)
-##x = Dense(128, activation='relu')(x)
-##preds = Dense(len(labels_index), activation='softmax')(x)
-##
-##
-### Fit the model
-##model = Model(sequence_input, preds)
-##model.compile(loss='categorical_crossentropy',
-##              optimizer='rmsprop',
-##              metrics=['acc'])
-
-
 
 words_input = Input(shape=(None,),dtype='int32',name='words_input')
 words = Embedding(input_dim=Glov_wordEmbd.shape[0], output_dim=Glov_wordEmbd.shape[1],  weights=[Glov_wordEmbd], trainable=False)(words_input)
